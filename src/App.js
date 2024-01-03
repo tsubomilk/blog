@@ -1,24 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <Router>
+      <div>
+        {/* ここにナビゲーションバーを配置することもできます */}
+        {/* <Route path="/" exact component={HomePage} />
+        <Route path="/articles" component={ArticlesPage} /> */}
+        {/* 他のルートも同様に設定 */}
+      <Navbar />
+      {/* 他のコンポーネントや要素 */}
+      </div>
+    </Router>
   );
 }
 
